@@ -19,6 +19,6 @@ from django.urls import path
 from inicio.views import inicio, template1
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",inicio)
-    path("template1/",template1)
+    path("",inicio),
+    path("template1/<nombre>/<apellido>",template1)
 ]
