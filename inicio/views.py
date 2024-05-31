@@ -8,4 +8,4 @@ def inicio (request):
 
 def template1 (request,nombre,apellido):
    fecha = datetime.now()
-   return HttpResponse("Mi template 1 -- Fecha: {fecha} -- Buenas {nombre} {apellido}")
+   return HttpResponse(f"Mi template 1 -- Fecha: {fecha} -- Buenas {nombre} {apellido}")
