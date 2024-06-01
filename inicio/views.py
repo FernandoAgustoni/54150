@@ -1,3 +1,4 @@
+from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
@@ -15,7 +16,7 @@ def template1 (request,nombre,apellido,edad):
 def template4 (request,nombre,apellido,edad):
    
     
-    template = loader.get_template ("template4.htlm")
+   
     
     fecha = datetime.now()
     
@@ -28,6 +29,5 @@ def template4 (request,nombre,apellido,edad):
     
   
     
-    template_renderizado = template.render (datos)
     
-    return HttpResponse (template_renderizado)
+    return render(request,"template4.htlm", datos)
