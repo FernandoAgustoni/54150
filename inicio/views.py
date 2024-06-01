@@ -30,4 +30,4 @@ def template4 (request,nombre,apellido,edad):
   
     
     
-    return render(request,"template4.htlm", datos)
+    return render(request,"template4.html", datos)
