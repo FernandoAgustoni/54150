@@ -2,7 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
-
+from inicio.models import Auto
 import random
 
 def inicio (request):
@@ -42,3 +42,8 @@ def probando (request):
     numeros= random.choices (lista, k=50)
     
     return render (request, "probando.html", {"numeros": numeros})
+
+def crear_auto (request, marca, modelo):
+    auto = Auto (marca= marca, modelo = modelo)
+    auto.save ()
+    return render(request,"auto.template/creacion.html", {"auto": auto})
