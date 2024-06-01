@@ -3,6 +3,8 @@ from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
 
+import random
+
 def inicio (request):
     return HttpResponse ("SOY leproso hasta los huevos")
 
@@ -31,3 +33,12 @@ def template4 (request,nombre,apellido,edad):
     
     
     return render(request,"template4.html", datos)
+
+
+def probando (request):
+    
+    lista = list (range(500))
+    
+    numeros= random.choices (lista, k=500)
+    
+    return render (request, "probando", {"numeros": numeros})
