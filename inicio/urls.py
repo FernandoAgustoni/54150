@@ -6,5 +6,5 @@ urlpatterns = [
     path("template1/<str:nombre>/<str:apellido>/<int:edad>",views.template1),
     path("template4/<str:nombre>/<str:apellido>/<int:edad>",views.template4),
     path("probando/",views.probando),
-    path("autos/crear/<str:marca>/<str:modelo",views.crear_auto), 
+    path("autos/crear/<str:marca>/<str:modelo>/",views.crear_auto), 
 ]
