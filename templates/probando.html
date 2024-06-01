@@ -6,8 +6,14 @@
     <title>Document</title>
 </head>
 <body>
-  
-    {{numeros}}
-
+  <ul>  
+    {% for  num in numeros %}
+       {% if num > 250 %}
+       <li style= "color:red"> NEWELLS CAMPEON CARAJO {{num}} </li>
+       {% else %}
+       <li style= "color:black"> NEWELLS CAMPEON CENTRAL PUTO {{num}} </li>
+       {% endif %}
+    {% endfor %}   
+  </ul>
 </body>
 </html>

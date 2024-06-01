@@ -39,6 +39,6 @@ def probando (request):
     
     lista = list (range(500))
     
-    numeros= random.choices (lista, k=500)
+    numeros= random.choices (lista, k=50)
     
-    return render (request, "probando", {"numeros": numeros})
+    return render (request, "probando.html", {"numeros": numeros})
