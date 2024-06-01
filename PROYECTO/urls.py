@@ -22,5 +22,5 @@ urlpatterns = [
     path("",inicio),
     path("template1/<str:nombre>/<str:apellido>/<int:edad>",template1),
     path("template4/<str:nombre>/<str:apellido>/<int:edad>",template4),
-    path("probando/",probando),
+    path("probando/",probando)
 ]
