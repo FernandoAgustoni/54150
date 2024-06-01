@@ -20,6 +20,6 @@ from inicio.views import inicio, template1,template4
 urlpatterns = [
     path('admin/', admin.site.urls),
     path("",inicio),
-    path("template1/<str:nombre>/<str:apellido>/<int:edad>",template1)
+    path("template1/<str:nombre>/<str:apellido>/<int:edad>",template1),
     path("template4/<str:nombre>/<str:apellido>/<int:edad>",template4)
 ]
