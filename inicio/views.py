@@ -46,4 +46,4 @@ def probando (request):
 def crear_auto (request, marca, modelo):
     auto = Auto (marca= marca, modelo = modelo)
     auto.save ()
-    return render(request,"auto.template/creacion.html", {"auto": auto})
+    return render(request,"auto-template/creacion.html", {"auto": auto})
