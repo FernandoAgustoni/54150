@@ -6,7 +6,7 @@ from inicio.models import Auto
 import random
 
 def inicio (request):
-    return HttpResponse ("SOY leproso hasta los huevos")
+    return render (request, "index.html")
 
 # Create your views here.
 
