@@ -11,9 +11,11 @@
 </html>
 {% extends "base.html" %}
 {% load static %}
-{% block h1_header %}
+{% block header %}
+<h1>
 Probando
-{% endblock h1_header %}
+</h1>
+{% endblock header %}
 {% block main %}
 <ul>  
   {% for  num in numeros %}
