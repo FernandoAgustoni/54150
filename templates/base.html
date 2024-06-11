@@ -19,8 +19,9 @@
         <!-- Navigation-->
         <nav class="navbar navbar-light bg-light static-top">
             <div class="container">
-                <a class="navbar-brand" href= {% url "" %} Inicio</a>
+                <a class="navbar-brand" href= {% url "inicio" %} >Inicio</a>
                 <a class="navbar-brand" href= {% url "probando" %}>Probando</a>
+                <a class="navbar-brand" href= {% url "crear_auto" "Ford" "Ka" %} >Creacion Auto</a>
                 <a class="btn btn-primary" href="#signup">Sign Up</a>
             </div>
         </nav>

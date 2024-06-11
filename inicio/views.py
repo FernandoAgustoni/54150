@@ -6,7 +6,7 @@ from inicio.models import Auto
 import random
 
 def inicio (request):
-    return render (request, "inicio/index.html")
+    return render (request,"inicio")
 
 # Create your views here.
 
