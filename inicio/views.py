@@ -1,9 +1,10 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from datetime import datetime
 from django.template import Template, Context, loader
 from inicio.models import Auto
 import random
+from inicio.forms import CrearAutosFormulario
 
 def inicio (request):
     return render (request,"inicio")
@@ -47,3 +48,29 @@ def crear_auto (request, marca, modelo):
     auto = Auto (marca= marca, modelo = modelo)
     auto.save ()
     return render(request,"auto-template/creacion.html", {"auto": auto})
+
+def crear_auto_V2 (request):
+    
+    print ("valor de la request; ", request)
+    print ("valor de GET; ", request.GET)
+    print ("valor de POST; ", request.POST)
+    
+    formulario = CrearAutosFormulario()
+    
+    if request.method == "POST":
+      formulario = CrearAutosFormulario(request.POST)
+      if formulario.is_valid ():
+       datos = formulario.cleaned_data   
+       auto= Auto (marca=datos.get ("marca"), modelo= datos.get ("modelo"))
+       auto.save()
+       return redirect ("autos")
+    
+   
+    return render (request, "inicio/crear_auto_V2.html",{"formulario": formulario} )
+
+def autos(request):
+    
+    autos= Auto.objects.all ()
+    
+    
+    return render (request,"inicio/autos.html", {"autos":autos})
